@@ -1,6 +1,7 @@
 const bodyParser = require("body-parser");
 const { response } = require("express");
 const express = require("express");
+const port = process.env.PORT || 2000
 
 const app     = express();
 
@@ -9,7 +10,7 @@ const app     = express();
 app.use(bodyParser.urlencoded({extended:true}))
 const request = require("request");
 
-app.listen(2000,()=>{
+app.listen(port,()=>{
 
   console.log("App is running at port 2000!");
 
